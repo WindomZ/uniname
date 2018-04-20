@@ -1,1 +1,36 @@
 # uniname - Unique Name
+
+> A CLI tool - rename file to unique name quickly
+
+## Usage
+```
+Usage:
+  uniname [-r] [--md5|--sha1|--sha256|--sha512] <file path>
+
+Example:
+  uniname -r demo.png
+
+Optional flags:
+  -md5
+        using md5sum, by default
+  -r    rename the input file
+  -sha1
+        using sha1sum
+  -sha256
+        using sha256sum
+  -sha512
+        using sha512sum
+  -v    print version
+```
+
+## Example
+```bash
+uniname -r dst.png        # md5sum, rename file.
+uniname -r --sha1 dst.png # sha1sum, rename file.
+uniname --sha256 dst.png  # sha256sum, do nothing.
+```
+
+## Install
+```bash
+go get -u github.com/WindomZ/uniname
+```
