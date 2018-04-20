@@ -25,11 +25,11 @@ var (
 )
 
 func display(s string) {
-	fmt.Fprintln(flag.CommandLine.Output(), s)
+	fmt.Fprintln(os.Stderr, s)
 }
 
 func commandName() (name string) {
-	name = filepath.Base(flag.CommandLine.Name())
+	name = filepath.Base(os.Args[0])
 	if name == "" {
 		name = "uniname"
 	}
@@ -41,7 +41,7 @@ func displayUsage() {
 	display(fmt.Sprintf("Usage:\n  %s [-r] [--md5|--sha1|--sha256|--sha512] <file path>", name))
 	display(fmt.Sprintf("\nExample:\n  %s -r demo.png", name))
 	display("\nOptional flags:")
-	flag.CommandLine.PrintDefaults()
+	flag.PrintDefaults()
 }
 
 func displayVersion() {
@@ -49,7 +49,7 @@ func displayVersion() {
 }
 
 func init() {
-	flag.CommandLine.Usage = displayUsage
+	flag.Usage = displayUsage
 }
 
 func main() {

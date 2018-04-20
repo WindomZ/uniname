@@ -1,6 +1,8 @@
 # uniname - Unique Name
 
-> A CLI tool - rename file to unique name quickly
+> A CLI tool - Rename file to unique name quickly
+
+[![Build Status](https://travis-ci.org/WindomZ/uniname.svg?branch=master)](https://travis-ci.org/WindomZ/uniname)
 
 ## Usage
 ```
@@ -23,7 +25,7 @@ Optional flags:
   -v    print version
 ```
 
-## Example
+## Examples
 ```bash
 uniname -r dst.png        # md5sum, rename file.
 uniname -r --sha1 dst.png # sha1sum, rename file.
@@ -34,3 +36,6 @@ uniname --sha256 dst.png  # sha256sum, do nothing.
 ```bash
 go get -u github.com/WindomZ/uniname
 ```
+
+## License
+[MIT](https://github.com/WindomZ/uniname/blob/master/LICENSE.md)
