@@ -15,6 +15,8 @@ import (
 	"strings"
 )
 
+var version string
+
 var (
 	optVersion bool
 	optReplace bool
@@ -45,7 +47,7 @@ func displayUsage() {
 }
 
 func displayVersion() {
-	display(fmt.Sprintf("%s version 1.0.0", commandName()))
+	display(fmt.Sprintf("%s version %s", commandName(), version))
 }
 
 func init() {
