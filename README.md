@@ -35,9 +35,15 @@ uniname --sha256 dst.png  # sha256sum, do nothing.
 ```
 
 ## Install
+If you have a Golang environment:
 ```bash
 go get -u github.com/WindomZ/uniname
 ```
+
+Or download the latest binary [release](https://github.com/WindomZ/uniname/releases)
+
+## Changelog
+See [CHANGELOG.md](https://github.com/WindomZ/uniname/blob/master/CHANGELOG.md#readme)
 
 ## License
 [MIT](https://github.com/WindomZ/uniname/blob/master/LICENSE)
