@@ -45,5 +45,11 @@ Or download the latest binary [release](https://github.com/WindomZ/uniname/relea
 ## Changelog
 See [CHANGELOG.md](https://github.com/WindomZ/uniname/blob/master/CHANGELOG.md#readme)
 
+## Contributing
+Welcome to pull requests, report bugs, suggest ideas and discuss, 
+i would love to hear what you think on [issues page](https://github.com/WindomZ/uniname/issues).
+
+If you like it then you can put a :star: on it.
+
 ## License
 [MIT](https://github.com/WindomZ/uniname/blob/master/LICENSE)
