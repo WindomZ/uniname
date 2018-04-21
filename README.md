@@ -38,4 +38,4 @@ go get -u github.com/WindomZ/uniname
 ```
 
 ## License
-[MIT](https://github.com/WindomZ/uniname/blob/master/LICENSE.md)
+[MIT](https://github.com/WindomZ/uniname/blob/master/LICENSE)

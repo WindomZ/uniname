@@ -16,7 +16,7 @@ script:
   - diff -u <(echo -n) <(gofmt -s -d ./)
   - diff -u <(echo -n) <(go vet ./...)
   - diff -u <(echo -n) <(golint ./...)
-  - uniname --md5 LICENSE.md
-  - uniname --sha1 LICENSE.md
-  - uniname --sha256 LICENSE.md
-  - uniname -r --sha512 LICENSE.md
+  - uniname --md5 LICENSE
+  - uniname --sha1 LICENSE
+  - uniname --sha256 LICENSE
+  - uniname -r --sha512 LICENSE
