@@ -3,6 +3,8 @@
 > A CLI tool - Rename file to unique name quickly
 
 [![Build Status](https://travis-ci.org/WindomZ/uniname.svg?branch=master)](https://travis-ci.org/WindomZ/uniname)
+[![Go Report Card](https://goreportcard.com/badge/github.com/WindomZ/uniname)](https://goreportcard.com/report/github.com/WindomZ/uniname)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Usage
 ```
