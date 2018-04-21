@@ -11,6 +11,7 @@ go:
 
 before_install:
   - go get github.com/golang/lint/golint
+  - go get -t ./...
 
 script:
   - diff -u <(echo -n) <(gofmt -s -d ./)
