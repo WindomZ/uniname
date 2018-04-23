@@ -18,6 +18,7 @@ import (
 var version string
 
 var (
+	optHelp    bool
 	optVersion bool
 	optReplace bool
 	optMD5     bool
@@ -41,7 +42,7 @@ func commandName() (name string) {
 func displayUsage() {
 	name := commandName()
 	display(fmt.Sprintf("Usage:\n  %s [-r] [--md5|--sha1|--sha256|--sha512] <file path>", name))
-	display(fmt.Sprintf("\nExample:\n  %s -r demo.png", name))
+	display(fmt.Sprintf("\nExample:\n  %s -r foo.png", name))
 	display("\nOptional flags:")
 	flag.PrintDefaults()
 }
@@ -55,9 +56,10 @@ func init() {
 }
 
 func main() {
+	flag.BoolVar(&optHelp, "h", false, "print help")
 	flag.BoolVar(&optVersion, "v", false, "print version")
 	flag.BoolVar(&optReplace, "r", false, "rename the input file")
-	flag.BoolVar(&optMD5, "md5", false, "using md5sum, by default")
+	flag.BoolVar(&optMD5, "md5", true, "using md5sum")
 	flag.BoolVar(&optSha1, "sha1", false, "using sha1sum")
 	flag.BoolVar(&optSha256, "sha256", false, "using sha256sum")
 	flag.BoolVar(&optSha512, "sha512", false, "using sha512sum")
@@ -67,7 +69,7 @@ func main() {
 		displayVersion()
 		os.Exit(0)
 	}
-	if flag.NArg() == 0 {
+	if optHelp || flag.NArg() == 0 {
 		displayUsage()
 		os.Exit(0)
 	}
