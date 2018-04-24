@@ -43,7 +43,8 @@ func commandName() (name string) {
 
 func displayUsage() {
 	name := commandName()
-	display(fmt.Sprintf("Usage:\n  %s [-r] [--md5|--sha1|--sha256|--sha512] <file path>", name))
+	display(fmt.Sprintf("Usage:\n  %[1]s [-r] [--sha1|--sha256|--sha512] <input file>"+
+		"\n  %[1]s [--sha1|--sha256|--sha512] <input file> -d <output directory>", name))
 	display(fmt.Sprintf("\nExample:\n  %[1]s -r foo.png"+
 		"\n  %[1]s -r --sha256 foo.png\n  %[1]s --sha512 foo.png -d foo/images", name))
 	display("\nOptional flags:")

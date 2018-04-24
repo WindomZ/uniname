@@ -9,14 +9,20 @@
 ## Usage
 ```
 Usage:
-  uniname [-r] [--md5|--sha1|--sha256|--sha512] <file path>
+  uniname [-r] [--sha1|--sha256|--sha512] <input file>
+  uniname [--sha1|--sha256|--sha512] <input file> -d <output directory>
 
 Example:
-  uniname -r demo.png
+  uniname -r foo.png
+  uniname -r --sha256 foo.png
+  uniname --sha512 foo.png -d foo/images
 
 Optional flags:
+  -d string
+        rename to the specified directory
+  -h    print help
   -md5
-        using md5sum, by default
+        using md5sum (default true)
   -r    rename the input file
   -sha1
         using sha1sum
@@ -29,9 +35,10 @@ Optional flags:
 
 ## Examples
 ```bash
-uniname -r dst.png        # md5sum, rename file.
-uniname -r --sha1 dst.png # sha1sum, rename file.
-uniname --sha256 dst.png  # sha256sum, do nothing.
+uniname -r foo.png                    # md5sum, rename file.
+uniname -r --sha1 foo.png             # sha1sum, rename file.
+uniname --sha256 foo.png              # sha256sum, do nothing.
+uniname --sha512 foo.png -d ./images  # sha512sum, create file to ./images.
 ```
 
 ## Install
